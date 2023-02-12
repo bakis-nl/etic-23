@@ -23,4 +23,5 @@
 hs_err_pid*
 
 /etic-front/target/
+/etic-front/Users/
 /etic-backend/target/
