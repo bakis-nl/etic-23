@@ -1,16 +1,40 @@
 package com.bakis.etic.frontend.controller;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PageController {
-	@RequestMapping(value = {"", "/home", "/index"})
+	@RequestMapping(value = { "", "/home", "/index" })
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("bakisgreeting", "baki was here !..");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickedHome", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/about")
+	public ModelAndView about() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "About");
+		mv.addObject("userClickedAbout", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Contact");
+		mv.addObject("userClickedContact", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/services")
+	public ModelAndView services() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Services");
+		mv.addObject("userClickedServices", true);
 		return mv;
 	}
 
