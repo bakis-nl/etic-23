@@ -19,13 +19,6 @@
 
 <title>Etic - ${title}</title>
 
-<script>
-	window.menu = $
-	{
-		title
-	}
-</script>
-
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.css" rel="stylesheet">
 
@@ -42,7 +35,9 @@
 
 	<!--  for footer alignment -->
 	<div class="wrapper">
-
+		<script>
+			window.menu = '${title}'
+		</script>
 		<!-- Navigation -->
 		<%@include file="./shared/navigate.jsp"%>
 
@@ -64,9 +59,13 @@
 				<%@include file="./contact.jsp"%>
 			</c:if>
 
-			<c:if test="${userClickedServices == true}">
+			<c:if test="${userClickedProducts == true}">
 				<!-- Content -->
-				<%@include file="./services.jsp"%>
+				<%@include file="./products.jsp"%>
+			</c:if>
+			<c:if test="${userClickedCategory == true}">
+				<!-- Content -->
+				<%@include file="./products.jsp"%>
 			</c:if>
 		</div>
 		<!-- footer -->
@@ -74,7 +73,7 @@
 		<!-- /.container -->
 
 		<!-- JavaScript -->
-		<script src="${js}/jquery.js"></script>
+		<script src="${js}/jquery-1.10.2.js"></script>
 		<script src="${js}/bootstrap.js"></script>
 
 		<!-- application scripts -->

@@ -13,6 +13,12 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>com.bakis.etic.backend</groupId>
+			<artifactId>etic-backend</artifactId>
+			<version>0.0.1</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
